@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="large-image">
+        <img src="../images/Desert.jpeg" alt="img1" style="width: 100%; height: 500px;"  >
+    </div>
+    <div class="thumbnail-images">
+        <img src="../images/Desert.jpeg" alt="img2" style="width: 19%; height: 200px;">
+        <img src="../images/Desert.jpeg" alt="img2" style="width: 19%; height: 200px;">
+        <img src="../images/Desert.jpeg" alt="img2" style="width: 19%; height: 200px;">
+        <img src="../images/Desert.jpeg" alt="img2" style="width: 19%; height: 200px;">
+        <img src="../images/Desert.jpeg" alt="img2" style="width: 19%; height: 200px;">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.thumbnail-images img').click(function() {
+                // Get the source of the clicked image
+                let newSrc = $(this).attr('src');
+                // Update the source of the large image
+                $('.large-image img').attr('src', newSrc);
+            });
+        });
+    </script>
+    
+</body>
+</html>

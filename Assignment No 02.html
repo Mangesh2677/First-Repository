@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"> </script>
+    <script>
+        $(document).ready(function () {
+            alert("doc ready");
+            $("#btn1").click(function () {
+                console.log("inside btn1 click");
+                $("#current").remove();
+            })
+            $("#btn2").click(function () {
+                console.log("inside btn2 click");
+                $("div").empty();
+            })
+            
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: aqua;">
+        <img src="../images/Jellyfish.jpg" style="height: 100px; width: 100%;" id="current">
+    </div>
+    <button id="btn1">Remove</button>
+    <button id="btn2">Clear div</button>
+</body>
+</html>
